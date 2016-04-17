@@ -309,17 +309,23 @@ void snull_rx(struct net_device *dev, struct snull_packet *pkt)
   priv->stats.rx_packets++;
   priv->stats.rx_bytes += pkt->datalen;
 
-   if (1) { /* enable this conditional to look at the data */
-     int i;
+//   if (1) { /* enable this conditional to look at the data */
+     int i = 0;
+     struct iphdr *iph = (struct iphdr*) skb->data;
      char *buf = skb->data;
      unsigned int len = skb->len;
-     printk("len is %i\n" KERN_INFO "data:",len);
+     printk("len is %i protocol is :%d\n" KERN_INFO "data:",len, iph->protocol);
      for (i=14 ; i<len; i++)
      {
         printk(" %02x",buf[i]&0xff);
      }
      printk("\n");
-  }
+//  }
+
+ if(iph->protocol == IPPROTO_ICMP)
+ {
+   printk(KERN_INFO "Received an ICMP packet.\n");
+ }
   
   netif_rx(skb);
 
