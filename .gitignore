@@ -97,14 +97,14 @@ x509.genkey
 all.config
 
 
-linux.IAB
-linux.IAD
-linux.IMB
-linux.IMD
-linux.PFI
-linux.PO
-linux.PR
-linux.PRI
-linux.PS
-linux.SearchResults
-linux.WK3
+mylinux.IAB
+mylinux.IAD
+mylinux.IMB
+mylinux.IMD
+mylinux.PFI
+mylinux.PO
+mylinux.PR
+mylinux.PRI
+mylinux.PS
+mylinux.SearchResults
+mylinux.WK3
