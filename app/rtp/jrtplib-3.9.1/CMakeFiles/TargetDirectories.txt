@@ -1,0 +1,7 @@
+/data/local/lyin/workspace/rtp/jrtplib-3.9.1/examples/CMakeFiles/example1.dir
+/data/local/lyin/workspace/rtp/jrtplib-3.9.1/examples/CMakeFiles/example2.dir
+/data/local/lyin/workspace/rtp/jrtplib-3.9.1/examples/CMakeFiles/example3.dir
+/data/local/lyin/workspace/rtp/jrtplib-3.9.1/examples/CMakeFiles/example4.dir
+/data/local/lyin/workspace/rtp/jrtplib-3.9.1/examples/CMakeFiles/example5.dir
+/data/local/lyin/workspace/rtp/jrtplib-3.9.1/src/CMakeFiles/jrtplib-shared.dir
+/data/local/lyin/workspace/rtp/jrtplib-3.9.1/src/CMakeFiles/jrtplib-static.dir
