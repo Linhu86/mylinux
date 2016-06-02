@@ -186,6 +186,8 @@ ssize_t scullp_read (struct file *filp, char __user *buf, size_t count,
   if (count > quantum - q_pos)
     count = quantum - q_pos; /* read only up to the end of this quantum */
 
+  printk("read data: %s\n", dptr->data[s_pos]+q_pos);
+
   if (copy_to_user (buf, dptr->data[s_pos]+q_pos, count)) {
     retval = -EFAULT;
     goto nothing;
