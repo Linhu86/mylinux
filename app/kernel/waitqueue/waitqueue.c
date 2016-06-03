@@ -146,7 +146,7 @@ static int test_open(struct inode *inode, struct file *filp)
   if(dev->pbuf == NULL)
   {
     printk(KERN_ERR "kmalloc failed.\n");
-    return -ENOMEM;
+    return ENOMEM;
   }
 
   filp->private_data = dev;
