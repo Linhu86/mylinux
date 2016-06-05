@@ -8,13 +8,13 @@ endif
 LDDINC=$(PWD)
 EXTRA_CFLAGS += $(DEBFLAGS) -I$(LDDINC)
 
-TARGET = waitqueue
+TARGET = chardev
 
 ifneq ($(KERNELRELEASE),)
 
-scullp-objs := waitqueue.c
+scullp-objs := chardev.c
 
-obj-m	:= waitqueue.o
+obj-m	:= chardev.o
 
 else
 
