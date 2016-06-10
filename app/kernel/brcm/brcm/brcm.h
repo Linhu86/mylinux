@@ -29,7 +29,7 @@ typedef union {
   struct {
     u32  _op:3,         /* opcode of this frame */
          _tq:2,         /* traffic queue */
-         _te:2,          /* tag enforement */
+         _te:2,         /* tag enforement */
          dst_pbmp:25;   /* destination pbmp */
   } brcm_tq_te_bmp;
 #define     brcm_dst_53242  brcm_tq_te_bmp._dst_pbmp
@@ -38,15 +38,17 @@ typedef union {
 #define     brcm_op_53242   brcm_tq_te_bmp._op
 
 /* for bcm53242 IMP egress packet transfer*/
-  struct {
-    u32 _op:3,      /* opcode of this frame */
-        _cnt:12,    /* frame octet count */
-        _cos:2,     /* COS queue */
-            :1,     /* reserved */
-        _reason:6, /* reason code */
-        _ermon:2,
-        _src_portid:6; /* source port id */
-  } brcm_53242_imp_egress_tag;
+struct {
+  u32 _op:3,      /* opcode of this frame */
+      _cnt:12,    /* frame octet count */
+      _cos:2,     /* COS queue */
+          :1,     /* reserved */
+      _reason:6, /* reason code */
+      _ermon:2,
+      _src_portid:6; /* source port id */
+} brcm_53242_imp_egress_tag;
+
+
 #define    brcm_53242_op            brcm_53242_imp_egress_tag._op
 #define    brcm_53242_reason        brcm_53242_imp_egress_tag._reason
 #define    brcm_53242_cosq          brcm_53242_imp_egress_tag._cos
