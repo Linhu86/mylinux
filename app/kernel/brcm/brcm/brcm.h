@@ -74,7 +74,7 @@ struct brcm_ethhdr {
   unsigned char h_source[ETH_ALEN];
   __be16  h_brcm_proto;
   u8  h_brcm_tq_te_bmp[4];
-  __be16  h_brcm_encapsulated_proto
+  __be16  h_brcm_encapsulated_proto;
 };
 
 /* Passed in brcm_ioctl_args structure to determine behaviour. */
